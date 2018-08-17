@@ -21,18 +21,21 @@ public class Client {
 		JAXBContext context = null;
 		Marshaller m;
 		
-		File file = new File("letter.txt");
+		File file = new File("HAI.txt");
 		
-		String name = "Quinton";
+		String name = "Jamil";
 		Date date = new Date();
-		byte[] bytes;
+		byte[] bytes = null;
 
 		try (FileInputStream fis = new FileInputStream(file);) {
 			bytes = new byte[fis.available()];
 			fis.read(bytes);
+		} catch (Exception e) {
+			System.out.println("File Input Not Found");
 		}
 
 		Student test = new Student(name, date, file.getName(), bytes);
+
 
 		try (FileOutputStream fos = new FileOutputStream("newText.xml")) {
 			context = context.newInstance(Student.class);

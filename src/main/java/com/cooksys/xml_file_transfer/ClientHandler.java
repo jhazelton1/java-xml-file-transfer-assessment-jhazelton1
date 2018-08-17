@@ -1,7 +1,5 @@
 package com.cooksys.xml_file_transfer;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -13,8 +11,6 @@ import javax.xml.bind.Unmarshaller;
 
 public class ClientHandler implements Runnable {
 
-//	private DataInputStream dis;
-//	private DataOutputStream dos;
 	private Socket socket;
 	private JAXBContext context = null;
 	Student student;
@@ -22,8 +18,6 @@ public class ClientHandler implements Runnable {
 
 	public ClientHandler(Socket socket) {
 		this.socket = socket;
-//		this.dis = dis;
-//		this.dos = dos;
 	}
 
 	public void run() {

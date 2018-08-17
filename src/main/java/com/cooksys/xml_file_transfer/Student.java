@@ -1,7 +1,9 @@
 package com.cooksys.xml_file_transfer;
 
+import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -30,7 +32,7 @@ public class Student {
 		this.fileName = fileName;
 		this.contents = contents;
 	}
-
+	
 	public String getUserName() {
 		return userName;
 	}
@@ -64,8 +66,16 @@ public class Student {
 	}
 	
 	public String getFormattedDate() {
-		return new SimpleDateFormat("yy-MM-dd").format(this.date);
+		return new SimpleDateFormat("yyyy-MM-dd").format(this.date);
 	}
+	
+//	public List<Field> getFields() {
+//		new List<Field>() {};
+//	}
+//	
+//	public List<Field> getFields() {
+//		if (this.)
+//	}
 	
 	
 	
